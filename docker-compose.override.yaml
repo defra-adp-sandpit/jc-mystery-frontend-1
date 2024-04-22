@@ -1,0 +1,15 @@
+# This override file should be used when running this service in isolation
+# to provide dependencies and expose ports for local testing
+
+services:
+  jc-mystery-frontend-1:
+    build:
+      target: development
+    image: jc-mystery-frontend-1-development
+    container_name: jc-mystery-frontend-1-development
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    volumes:
+      - ./app:/home/node/app
+      - ./package.json:/home/node/package.json

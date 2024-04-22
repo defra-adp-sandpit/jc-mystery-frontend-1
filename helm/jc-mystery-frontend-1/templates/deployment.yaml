@@ -1,0 +1,8 @@
+{{- include "adp-helm-library.deployment" (list . "jc-mystery-frontend-1.deployment") -}}
+{{- define "jc-mystery-frontend-1.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "adp-helm-library.container" (list . "jc-mystery-frontend-1.container") }}
+{{- end -}}

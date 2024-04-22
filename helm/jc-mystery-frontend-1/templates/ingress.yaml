@@ -1,0 +1,3 @@
+{{- include "adp-helm-library.azure-ingress" (list . "jc-mystery-frontend-1.ingress") -}}
+{{- define "jc-mystery-frontend-1.ingress" -}}
+{{- end -}}

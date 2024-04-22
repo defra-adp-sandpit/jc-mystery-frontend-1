@@ -1,0 +1,10 @@
+services:
+  jc-mystery-frontend-1:
+    build:
+      context: .
+      target: production
+    image: jc-mystery-frontend-1
+    container_name: jc-mystery-frontend-1
+    environment:
+      APPINSIGHTS_CLOUDROLE: jc-mystery-frontend-1-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
